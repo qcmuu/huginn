@@ -53,10 +53,10 @@ jobs:
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
-        env:
-          BUNDLE_WITHOUT: "production"
         with:
           ruby-version: ${{ matrix.ruby }}
+          rubygems: latest
+          bundler: latest
           bundler-cache: true
 
       - name: Set up database
